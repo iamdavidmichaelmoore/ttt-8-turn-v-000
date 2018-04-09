@@ -1,6 +1,13 @@
 #turn method that will iterate the user to take a turn
 def turn(board)
   puts "Please enter 1-9:"
+  input = gets.strip
+  to_index = input_to_index(input)
+  while valid_move?(board, to_index) == false
+    puts "Please enter 1-9:"
+  else
+    move(board, to_index, value="X")
+  end
 end
 
 
