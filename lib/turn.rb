@@ -9,6 +9,7 @@ def turn(board)
     to_index = input_to_index(input)
   end
     move(board, to_index, value="X")
+    display(board)
 end
 
 
